@@ -21,7 +21,7 @@ class App extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
-                  height: 80,
+                  height: 60,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -49,7 +49,7 @@ class App extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 70,
+                  height: 40,
                 ),
                 Text(
                   'Total Balance',
@@ -70,7 +70,7 @@ class App extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -116,12 +116,14 @@ class App extends StatelessWidget {
                   height: 20,
                 ),
                 Container(
+                  clipBehavior: Clip.hardEdge,
                   decoration: BoxDecoration(
                       color: const Color(0xFF1F2123),
                       borderRadius: BorderRadius.circular(25)),
                   child: Padding(
-                    padding: const EdgeInsets.all(30),
+                    padding: const EdgeInsets.all(25),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,12 +132,12 @@ class App extends StatelessWidget {
                               'Euro',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 32,
+                                fontSize: 30,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
                             const SizedBox(
-                              height: 10,
+                              height: 7,
                             ),
                             Row(
                               children: [
@@ -160,6 +162,17 @@ class App extends StatelessWidget {
                             ),
                           ],
                         ),
+                        Transform.scale(
+                          scale: 2.4,
+                          child: Transform.translate(
+                            offset: const Offset(-5, 12),
+                            child: const Icon(
+                              Icons.euro_rounded,
+                              color: Colors.white,
+                              size: 78,
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ),
